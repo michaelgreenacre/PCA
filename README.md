@@ -5,6 +5,8 @@ The data files and R scripts for the Nature Reviews Methods Primer: Principal Co
 
 **world-happiness-report-2021.csv**: CSV file of the World Happiness data
 
+(The Khan cancer data is provided in package ISLR2)
+
 **BarentsFish.csv**: CSV file of the Barents Sea fish data
 
 
