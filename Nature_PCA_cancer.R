@@ -190,11 +190,14 @@ set.seed(123)
 CIplot_biv(sparse.rpc[,1], sparse.rpc[,2], group=factor(khan.y), groupnames=khan.labs, 
            groupcols=khan.cols, add=TRUE)
 
-### Number of genes not shrunk to 0 on each dimension
+### Number of genes *not* shrunk to 0 on each dimension
 sum(sparse.ccc[,1] != 0)  
 # [1] 103
 sum(sparse.ccc[,2] != 0)  
 # [1] 84
+### Number of genes nonzero on both dimensions
+sum(sparse.ccc[,1] != 0 & sparse.ccc[,2] !=0)  
+[1] 1
 
 ### Khan centroids sparse
 khan.means <-  aggregate(khan.x ~ factor(khan.y), FUN=mean)
@@ -246,9 +249,11 @@ CIplot_biv(sparse.ctrs.spc[,1], sparse.ctrs.spc[,2], group=factor(khan.y), group
 set.seed(123)
 CIplot_biv(sparse.ctrs.spc[,1], sparse.ctrs.spc[,2], group=factor(khan.y), groupnames=khan.labs, 
            groupcols=khan.cols, add=TRUE)
+### Number of genes *not* shrunk to 0 on each dimension
 sum(sparse.ctrs.ccc[,1] != 0)  
 # 101
 sum(sparse.ctrs.ccc[,2] != 0)  
 # 115
-
-}
+### Number of genes nonzero on both dimensions
+sum(sparse.ctrs.ccc[,1] != 0 & sparse.ctrs.ccc[,2] !=0)  
+# [1] 22
