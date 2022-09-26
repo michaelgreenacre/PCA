@@ -18,3 +18,4 @@ The data files and R scripts for the Nature Reviews Methods Primer: Principal Co
 
 **Nature_PCA_fish.R**: script for analysing (CA) the Barents Sea fish data
 
+**Nature_happy_missing.R**: script for missing value imputation exercise
